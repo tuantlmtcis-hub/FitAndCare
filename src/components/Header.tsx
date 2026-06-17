@@ -44,16 +44,18 @@ export default function Header({ isDark, onToggleTheme }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#hero" onClick={(e) => handleNav(e, '#hero')} className="flex items-center gap-2 flex-shrink-0">
+          <a href="#hero" onClick={(e) => handleNav(e, '#hero')} className="flex items-center gap-2.5 flex-shrink-0">
+            <img
+              src="/logo.png"
+              alt="FIT AND CARE"
+              className="w-10 h-10 rounded-full object-cover"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
             <div className="flex flex-col leading-none">
-              <span className="text-2xl font-black tracking-tight">
-                <span className="text-[#FFD43B]">Fn</span>
-                <span className="text-[#0B74D1] dark:text-[#1E90FF]">C</span>
-              </span>
-              <span className="text-[10px] font-bold text-[#063B63] dark:text-[#F8FAFC] tracking-widest uppercase leading-none">
+              <span className="text-sm font-black tracking-tight text-[#063B63] dark:text-[#F8FAFC]">
                 FIT AND CARE
               </span>
-              <span className="text-[9px] italic text-[#6B7280] dark:text-[#94A3B8] leading-none">
+              <span className="text-[10px] italic text-[#6B7280] dark:text-[#94A3B8] leading-tight">
                 học ăn thông minh
               </span>
             </div>

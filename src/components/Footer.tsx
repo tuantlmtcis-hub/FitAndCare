@@ -17,13 +17,17 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex flex-col mb-4">
-              <span className="text-3xl font-black">
-                <span className="text-[#FFD43B]">Fn</span>
-                <span className="text-[#1E90FF]">C</span>
-              </span>
-              <span className="text-xs font-bold text-white tracking-widest uppercase">FIT AND CARE</span>
-              <span className="text-xs italic text-[#94A3B8]">học ăn thông minh</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo.png"
+                alt="FIT AND CARE"
+                className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+              />
+              <div className="flex flex-col leading-none">
+                <span className="text-sm font-black text-white">FIT AND CARE</span>
+                <span className="text-xs italic text-[#94A3B8]">học ăn thông minh</span>
+              </div>
             </div>
             <p className="text-sm text-[#94A3B8] leading-relaxed mb-5">
               Đồng hành cùng bạn xây dựng thói quen ăn uống thông minh, lành mạnh và bền vững.
